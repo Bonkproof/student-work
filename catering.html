@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Catering - Sheppard Bakery</title>
+    <link rel="stylesheet" href="styles.css"> 
+    <link rel="stylesheet" href="banner.css"> 
+</head>
+<body>
+    
+    <header>
+        <h1>Sheppard Bakery</h1>
+        <p>Your go-to place for artisanal sweets</p>
+    </header>
+    <nav>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="menu.html">Menu</a></li>
+            <li><a href="catering.html">Catering</a></li>
+            <li><a href="support.html">Support</a></li>
+            <li><a href="contact.html">Contact Us</a></li>
+        </ul>
+    </nav>
+    
+    <main>
+        <section id="catering">
+            <h2>Catering Services</h2>
+            <p>We offer catering for all occasions, from small gatherings to large events. Let us bring our artisanal sweets to your next event!</p>
+
+            
+            <h3>Contact Us for Catering Inquiries:</h3>
+            <p><strong>Phone:</strong> +1 (555) 123-4567</p>
+            <p><strong>Email:</strong> <a href="mailto:catering@sheppardsbakery.com">catering@sheppardsbakery.com</a></p>
+
+            
+            <form action="submit_form.php" method="POST">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
+
+                <label for="event_date">Event Date:</label>
+                <input type="date" id="event_date" name="event_date" required>
+
+                <label for="guests">Number of Guests:</label>
+                <input type="number" id="guests" name="guests" required>
+
+                <label for="message">Special Requests or Comments:</label>
+                <textarea id="message" name="message"></textarea>
+
+                <button type="submit">Submit Inquiry</button>
+            </form>
+        </section>
+    </main>
+
+    
+    <footer>
+        <p>&copy; 2024 Sheppard Bakery. All rights reserved.</p>
+    </footer>
+</body>
+</html>
