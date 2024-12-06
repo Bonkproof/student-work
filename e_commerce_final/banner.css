@@ -1,0 +1,37 @@
+/* banner sizing and information */
+header {
+    background-image: url('Sheppards Bakery.png');
+    background-size: contain; /* Ensures the whole image is visible */
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 200px; /* Adjust as needed */
+    width: 100%;
+    color: white;
+    text-align: center;
+    position: relative;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 2rem;
+    z-index: 1;
+    position: relative;
+}
+
+header p {
+    margin: 0.5rem 0 0;
+    z-index: 1;
+    position: relative;
+}
+
+
+header::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.4); 
+    z-index: 0;
+}

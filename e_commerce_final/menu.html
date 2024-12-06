@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menu - Sheppard Bakery</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="banner.css">
+    <link rel="stylesheet" href="image-styles.css">
+</head>
+<body>
+    <!-- Banner/Header -->
+    <header>
+        <h1>Sheppard Bakery</h1>
+        <p>Your go-to place for artisanal sweets</p>
+    </header>
+    <nav>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="menu.html">Menu</a></li>
+            <li><a href="catering.html">Catering</a></li>
+            <li><a href="contact.html">Contact Us</a></li>
+            <li><a href="support.html">Support</a></li>
+            <li><a href="cart.html">Cart</a></li>
+        </ul>
+    </nav>
+
+    <!-- Main Menu Content -->
+    <main>
+        <section id="menu">
+            <h2>Our Menu</h2>
+            <p>Explore our handcrafted, delicious selection of artisanal sweets and baked goods.</p>
+    
+            <!-- Pastries Section -->
+            <h3>Pastries</h3>
+            <div class="menu-list">
+                <!-- Croissant -->
+                <div class="menu-item" data-id="croissant-butter" data-price="4.50">
+                    <figure>
+                        <img id="croissant-image" src="croissant_butter.jpg" alt="Fresh buttery croissant" />
+                        <figcaption id="croissant-caption">Fresh buttery croissant</figcaption>
+                    </figure>
+                    <div class="item-details">
+                        <h4>Croissant</h4>
+                        <label for="croissant-flavor">Choose a flavor:</label>
+                        <select id="croissant-flavor" onchange="updateImage('croissant-image', 'croissant-caption', 'croissant', this.value)">
+                            <option value="butter">Butter</option>
+                            <option value="chocolate">Chocolate</option>
+                            <option value="almond">Almond</option>
+                        </select>
+                        <p>$4.50 each</p>
+                        <button onclick="addToCart('croissant', 'Croissant', 4.50, 'butter')">Add to Cart</button>
+                    </div>
+                </div>
+    
+                <!-- Danish -->
+                <div class="menu-item" data-id="danish-berry" data-price="5.00">
+                    <figure>
+                        <img id="danish-image" src="danish_berry.jpg" alt="Berry-filled Danish pastry" />
+                        <figcaption id="danish-caption">Berry-filled Danish pastry</figcaption>
+                    </figure>
+                    <div class="item-details">
+                        <h4>Danish</h4>
+                        <label for="danish-flavor">Choose a flavor:</label>
+                        <select id="danish-flavor" onchange="updateImage('danish-image', 'danish-caption', 'danish', this.value)">
+                            <option value="berry">Berry</option>
+                            <option value="cheese">Cheese</option>
+                            <option value="apple">Apple</option>
+                        </select>
+                        <p>$5.00 each</p>
+                        <button onclick="addToCart('danish', 'Danish', 5.00, 'berry')">Add to Cart</button>
+                    </div>
+                </div>
+            </div>
+    
+            <!-- Cookies Section -->
+            <h3>Cookies</h3>
+            <div class="menu-list">
+                <div class="menu-item" data-id="cookie-chocolate-chip" data-price="2.00">
+                    <figure>
+                        <img id="cookie-image" src="cookie_classic.jpg" alt="Classic chocolate chip cookie" />
+                        <figcaption id="cookie-caption">Classic chocolate chip cookie</figcaption>
+                    </figure>
+                    <div class="item-details">
+                        <h4>Chocolate Chip Cookie</h4>
+                        <p>$2.00 each</p>
+                        <button onclick="addToCart('cookie-chocolate-chip', 'Chocolate Chip Cookie', 2.00, 'classic')">Add to Cart</button>
+                    </div>
+                </div>
+    
+                <div class="menu-item" data-id="cookie-macadamia" data-price="2.50">
+                    <figure>
+                        <img id="macadamia-image" src="cookie_macadamia.jpg" alt="Macadamia nut cookie" />
+                        <figcaption id="macadamia-caption">Macadamia nut cookie</figcaption>
+                    </figure>
+                    <div class="item-details">
+                        <h4>Macadamia Nut Cookie</h4>
+                        <p>$2.50 each</p>
+                        <button onclick="addToCart('cookie-macadamia', 'Macadamia Nut Cookie', 2.50, 'classic')">Add to Cart</button>
+                    </div>
+                </div>
+            </div>
+    
+            <!-- Cupcakes Section -->
+            <h3>Cupcakes</h3>
+            <div class="menu-list">
+                <div class="menu-item" data-id="cupcake-vanilla" data-price="3.50">
+                    <figure>
+                        <img id="vanilla-cupcake-image" src="cupcake_vanilla.jpg" alt="Vanilla cupcake with buttercream frosting" />
+                        <figcaption id="vanilla-cupcake-caption">Vanilla cupcake with buttercream frosting</figcaption>
+                    </figure>
+                    <div class="item-details">
+                        <h4>Vanilla Cupcake</h4>
+                        <p>$3.50 each</p>
+                        <button onclick="addToCart('cupcake-vanilla', 'Vanilla Cupcake', 3.50, 'vanilla')">Add to Cart</button>
+                    </div>
+                </div>
+    
+                <div class="menu-item" data-id="cupcake-chocolate" data-price="3.50">
+                    <figure>
+                        <img id="chocolate-cupcake-image" src="cupcake_chocolate.jpg" alt="Chocolate cupcake with ganache topping" />
+                        <figcaption id="chocolate-cupcake-caption">Chocolate cupcake with ganache topping</figcaption>
+                    </figure>
+                    <div class="item-details">
+                        <h4>Chocolate Cupcake</h4>
+                        <p>$3.50 each</p>
+                        <button onclick="addToCart('cupcake-chocolate', 'Chocolate Cupcake', 3.50, 'chocolate')">Add to Cart</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2024 Sheppard Bakery. All rights reserved.</p>
+    </footer>
+
+    <script>
+        let cart = JSON.parse(localStorage.getItem('cart')) || [];
+
+        function addToCart(item, price) {
+            const quantity = 1;
+            const existingItem = cart.find(cartItem => cartItem.item === item);
+            if (existingItem) {
+                existingItem.quantity += quantity;
+            } else {
+                cart.push({ item, price, quantity });
+            }
+            localStorage.setItem('cart', JSON.stringify(cart));
+            alert(`${item} has been added to your cart!`);
+        }
+
+        function goToCart() {
+            window.location.href = 'cart.html';
+        }
+
+        function updateImage(imageId, captionId, baseName, flavor) {
+            const image = document.getElementById(imageId);
+            const caption = document.getElementById(captionId);
+            const flavorDescriptions = {
+                butter: "Fresh buttery croissant",
+                chocolate: "Chocolate-filled croissant",
+                almond: "Almond croissant",
+                berry: "Berry-filled Danish pastry",
+                cheese: "Cheese Danish pastry",
+                apple: "Apple-filled Danish pastry"
+            };
+
+            image.src = `${baseName}_${flavor}.jpg`;
+            image.alt = flavorDescriptions[flavor];
+            caption.textContent = flavorDescriptions[flavor];
+        }
+    </script>
+</body>
+</html>
+
+
+    

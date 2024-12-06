@@ -1,0 +1,209 @@
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4; /* Light background */
+}
+
+/* Banner Styles */
+header.banner {
+    background-color: #d8b99f; /* Warm, bakery-inspired color from styles.css */
+    padding: 20px;
+    text-align: center;
+}
+
+header.banner img {
+    width: 100%;
+    max-width: 600px;
+    height: auto;
+}
+
+/* Navigation Styles */
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    background-color: #8f7b6f; /* Soft brown color from styles.css */
+    display: flex;
+    justify-content: center;
+}
+
+nav ul li {
+    margin: 10px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: white;
+    padding: 10px 20px;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+nav ul li a:hover {
+    background-color: #6f5b46; /* Darker brown for hover, consistent with styles.css */
+    border-radius: 4px;
+}
+
+/* Cart Section */
+main {
+    max-width: 1200px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+    text-align: center;
+    color: #6f5b46; /* Dark brown from styles.css */
+}
+
+.cart-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.cart-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+}
+
+.cart-table th, .cart-table td {
+    padding: 12px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+.cart-table th {
+    background-color: #8f7b6f; /* Soft brown from styles.css */
+    color: white;
+}
+
+.cart-table td {
+    background-color: #f9f9f9; /* Light background from styles.css */
+}
+
+.cart-summary {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    padding: 15px;
+    background-color: #e6e1d3; /* Light beige consistent with styles.css */
+    border-radius: 8px;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+    margin-top: 20px;
+}
+
+.cart-summary p {
+    font-size: 1.2em;
+    font-weight: bold;
+}
+
+.cart-summary button {
+    background-color: #8f7b6f; /* Matching button color from styles.css */
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1em;
+}
+
+.cart-summary button:hover {
+    background-color: #6f5b46; /* Darker brown for hover from styles.css */
+}
+
+/* Checkout Modal Styles */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.4);
+    padding-top: 60px;
+}
+
+.modal-content {
+    background-color: white;
+    margin: 5% auto;
+    padding: 20px;
+    border-radius: 8px;
+    width: 40%;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.close-btn {
+    color: #aaa;
+    font-size: 28px;
+    font-weight: bold;
+    float: right;
+    margin-top: -10px;
+}
+
+.close-btn:hover,
+.close-btn:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+h2 {
+    color: #6f5b46; /* Dark brown for headers */
+    margin-bottom: 20px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+form label {
+    font-size: 1.1em;
+    margin-bottom: 10px;
+}
+
+form input {
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 1em;
+}
+
+form button {
+    background-color: #8f7b6f; /* Button color matches navigation from styles.css */
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1.2em;
+}
+
+form button:hover {
+    background-color: #6f5b46; /* Darker brown for button hover */
+}
+
+@media (max-width: 768px) {
+    .modal-content {
+        width: 80%;
+    }
+
+    .cart-summary {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .cart-summary button {
+        width: 100%;
+    }
+}
